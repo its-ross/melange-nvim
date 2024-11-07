@@ -395,6 +395,11 @@ for name, attrs in pairs {
   CmpItemKindConstant = '@constant',
   CmpItemKindColor = '@constant',
   CmpItemKindClass = '@type',
+
+  ---- :h neotest (external plugin) -------------------
+  NeoTestFile = 'String',
+  NeotestNamespace = 'Constant',
+  NeotestTest = 'Identifier',
 } do
   if type(attrs) == 'table' then
     vim.api.nvim_set_hl(0, name, attrs)
