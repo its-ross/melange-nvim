@@ -398,7 +398,7 @@ for name, attrs in pairs {
 
   ---- :h neotest (external plugin) -------------------
   NeoTestDir = 'Directory',
-  NeoTestFile = 'String',
+  NeoTestFile = { fg = b.blue },
   NeotestNamespace = 'Constant',
   NeotestTest = 'Identifier',
 } do
