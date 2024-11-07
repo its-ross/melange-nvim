@@ -397,7 +397,7 @@ for name, attrs in pairs {
   CmpItemKindClass = '@type',
 
   ---- :h neotest (external plugin) -------------------
-  NeoTestDir = 'Directory'
+  NeoTestDir = 'Directory',
   NeoTestFile = 'String',
   NeotestNamespace = 'Constant',
   NeotestTest = 'Identifier',
