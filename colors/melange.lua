@@ -543,6 +543,10 @@ for name, attrs in pairs {
   MiniTestPass = { fg = d.green, bold = true },
 
   MiniTrailspace = { link = 'DiffRemoved' },
+  ---- :h neotest (external plugin) -------------------
+  NeoTestFile = 'String',
+  NeotestNamespace = 'Constant',
+  NeotestTest = 'Identifier',
 } do
   if type(attrs) == 'table' then
     vim.api.nvim_set_hl(0, name, attrs)
