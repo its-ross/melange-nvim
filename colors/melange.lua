@@ -193,14 +193,14 @@ for name, attrs in pairs {
 
   --- NOTE: Queries for these highlight groups are really hacky.
   --- Inaccurate syntax highlighting is worse than no highlighting at all,
-  ['@constant'] = 'Identifier',
+  ['@constant'] = 'Constant',
   ['@constant.builtin'] = 'Constant',
   ['@constant.macro'] = 'Constant',
   ['@module'] = 'Identifier',
   ['@module.builtin'] = '@module',
   ['@label'] = { fg = b.cyan },
   ['@variable'] = 'Identifier',
-  ['@variable.builtin'] = '@string.special.symbol',
+  ['@variable.builtin'] = { fg = c.magenta, italic = italic },
   -- ['@variable.parameter'] = {},
   -- ['@variable.member'] = {},
 
