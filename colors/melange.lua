@@ -548,6 +548,20 @@ for name, attrs in pairs {
   NeoTestFile = { fg = b.blue },
   NeotestNamespace = 'Constant',
   NeotestTest = 'Identifier',
+  ---- :h nvim-dap (external plugin) -------------------
+  DapUIScope = 'Type',
+  DapUIType = 'Constant',
+  DapUIDecoration = 'Type',
+  DapUIThread = 'PreProc',
+  DapUIStoppedThread = 'Type',
+  DapUISource = 'Constant',
+  DapUILineNumber = 'Type',
+  DapUIFloatBorder = 'Type',
+  DapUIWatchesEmpty = { fg = c.red },
+  DapUIWatchesValue = 'PreProc',
+  DapUIWatchesError = { fg = c.red },
+  DapUIBreakpointsPath = 'Type',
+  DapUIBreakpointsInfo = 'PreProc',
 } do
   if type(attrs) == 'table' then
     vim.api.nvim_set_hl(0, name, attrs)
