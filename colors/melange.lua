@@ -415,6 +415,8 @@ for name, attrs in pairs {
   DapUIWatchesError = { fg = c.red },
   DapUIBreakpointsPath = 'Type',
   DapUIBreakpointsInfo = 'PreProc',
+  DapUIBreakpointsCurrentLine = { fg = c.cyan, bold = bold },
+  DapUIModifiedValue = { fg = c.cyan, bold = bold },
 } do
   if type(attrs) == 'table' then
     vim.api.nvim_set_hl(0, name, attrs)
