@@ -220,7 +220,7 @@ for name, attrs in pairs {
   -- ['@function.builtin'] = {},
   ['@function.macro'] = 'Function',
   -- ['@function.method'] = {},
-  -- ['@constructor'] = {},
+  ['@constructor'] = { fg = b.cyan },
 
   -- ['@punctuation.bracket'] = {},
   ['@punctuation.delimiter'] = { fg = c.red },
