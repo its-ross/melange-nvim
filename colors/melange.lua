@@ -205,7 +205,7 @@ for name, attrs in pairs {
   -- ['@variable.member'] = {},
 
   -- ['@type'] = {},
-  -- ['@type.builtin'] = {},
+  ['@type.builtin'] = 'Type',
   -- ['@type.definition'] = {},
   ['@type.qualifier'] = 'Statement',
   -- ['@attribute'] = {},
