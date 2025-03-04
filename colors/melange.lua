@@ -64,6 +64,9 @@ for name, attrs in pairs {
   PmenuMatch = { fg = b.yellow, bold = bold, bg = a.float },
   PmenuMatchSel = { fg = b.yellow, bold = bold, bg = a.sel },
 
+  qfFileName = '@string.special.path',
+  QuickFixLine = 'PmenuMatch',
+
   StatusLine = 'NormalFloat',
   StatusLineNC = { fg = a.com, bg = a.float },
   WildMenu = 'NormalFloat',
@@ -95,6 +98,8 @@ for name, attrs in pairs {
   MoreMsg = { fg = c.green, bold = bold },
   WarningMsg = { fg = c.red },
   Question = 'MoreMsg',
+
+  ComplMatchIns = 'Comment',
 
   ---- :help :diff -------------------------------------------
 
@@ -335,6 +340,7 @@ for name, attrs in pairs {
 
   --- neo-tree highlights  :help neo-tree-highlights ---
 
+  NeoTreeFloatBorder = 'Normal',
   NeoTreeNormal = 'NormalFloat',
   NeoTreeNormalNC = 'NeoTreeNormal',
   NeoTreeVertSplit = { bg = a.bg, fg = a.bg },
@@ -396,6 +402,147 @@ for name, attrs in pairs {
   CmpItemKindColor = '@constant',
   CmpItemKindClass = '@type',
 
+  --- mini.nvim highlights  :help mini.nvim ------------------
+  --- Highlight groups from the contributing guide:
+  --- https://github.com/echasnovski/mini.nvim/blob/main/CONTRIBUTING.md
+
+  -- MiniAnimateCursor = {},
+  -- MiniAnimateNormalFloat = {},
+
+  -- MiniClueBorder = {},
+  -- MiniClueDescGroup = {},
+  -- MiniClueDescSingle = {},
+  -- MiniClueNextKey = {},
+  -- MiniClueNextKeyWithPostkeys = {},
+  -- MiniClueSeparator = {},
+  -- MiniClueTitle = {},
+
+  -- MiniCompletionActiveParameter = {},
+
+  -- MiniCursorword = {},
+  -- MiniCursorwordCurrent = {},
+
+  MiniDepsChangeAdded = { link = 'DiffAdd' },
+  MiniDepsChangeRemoved = { link = 'DiffDelete' },
+  -- MiniDepsHint = {},
+  -- MiniDepsInfo = {},
+  -- MiniDepsMsgBreaking = {},
+  -- MiniDepsPlaceholder = {},
+  -- MiniDepsTitle = {},
+  -- MiniDepsTitleError = {},
+  -- MiniDepsTitleSame = {},
+  -- MiniDepsTitleUpdate = {},
+
+  MiniDiffSignAdd = { fg = b.green },
+  MiniDiffSignChange = { fg = b.magenta },
+  MiniDiffSignDelete = { fg = b.red },
+  -- MiniDiffOverAdd = {},
+  -- MiniDiffOverChange = {},
+  -- MiniDiffOverContext = {},
+  -- MiniDiffOverDelete = {},
+
+  -- MiniFilesBorder = {},
+  -- MiniFilesBorderModified = {},
+  MiniFilesCursorLine = { bg = a.sel },
+  MiniFilesDirectory = { fg = b.cyan },
+  MiniFilesFile = { fg = a.fg },
+  -- MiniFilesNormal = {},
+  MiniFilesTitle = { fg = a.ui, bg = a.float },
+  MiniFilesTitleFocused = { fg = c.yellow, bg = a.float },
+
+  -- MiniHipatternsFixme = {},
+  -- MiniHipatternsHack = {},
+  -- MiniHipatternsNote = {},
+  -- MiniHipatternsTodo = {},
+
+  MiniIconsAzure = { fg = b.blue },
+  MiniIconsBlue = { fg = c.blue },
+  MiniIconsCyan = { fg = c.cyan },
+  MiniIconsGreen = { fg = c.green },
+  MiniIconsGrey = { fg = a.fg },
+  MiniIconsOrange = { fg = d.yellow },
+  MiniIconsPurple = { fg = c.magenta },
+  MiniIconsRed = { fg = b.red },
+  MiniIconsYellow = { fg = b.yellow },
+
+  MiniIndentscopeSymbol = { fg = a.sel },
+  -- MiniIndentscopeSymbolOff = {},
+
+  -- MiniJump = {},
+
+  MiniJump2dSpot = { fg = c.magenta, bold = true, nocombine = true },
+  MiniJump2dSpotAhead = { fg = c.cyan, bg = c.float, nocombine = true },
+  -- MiniJump2dSpotUnique = {},
+  -- MiniJump2dDim = {},
+
+  -- MiniMapNormal = {},
+  -- MiniMapSymbolCount = {},
+  -- MiniMapSymbolLine = {},
+  -- MiniMapSymbolView = {},
+
+  -- MiniNotifyBorder = {},
+  -- MiniNotifyNormal = {},
+  -- MiniNotifyTitle = {},
+
+  -- MiniOperatorsExchangeFrom = {},
+
+  -- MiniPickBorder = {},
+  -- MiniPickBorderBusy = {},
+  -- MiniPickBorderText = {},
+  MiniPickIconDirectory = { fg = b.cyan },
+  -- MiniPickIconFile = {},
+  -- MiniPickHeader = {},
+  MiniPickMatchCurrent = { bg = a.sel },
+  -- MiniPickMatchMarked = {},
+  -- MiniPickMatchRanges = {},
+  -- MiniPickNormal = {},
+  -- MiniPickPreviewLine = {},
+  -- MiniPickPreviewRegion = {},
+  MiniPickPrompt = { fg = b.yellow, bg = a.float },
+
+  -- MiniSnippetsCurrent = {},
+  -- MiniSnippetsCurrentReplace = {},
+  -- MiniSnippetsCurrentFinal = {},
+  -- MiniSnippetsCurrentUnvisited = {},
+  -- MiniSnippetsCurrentVisited = {},
+
+  -- MiniStarterCurrent = {},
+  MiniStarterFooter = { fg = c.yellow },
+  -- MiniStarterHeader = {},
+  -- MiniStarterInactive = {},
+  -- MiniStarterItem = {},
+  -- MiniStarterItemBullet = {},
+  MiniStarterItemPrefix = { fg = c.red },
+  MiniStarterSection = { fg = c.green },
+  MiniStarterQuery = { fg = c.blue },
+
+  MiniStatuslineDevinfo = { fg = a.fg, bg = a.sel },
+  MiniStatuslineFileinfo = { fg = a.fg, bg = a.sel },
+  MiniStatuslineFilename = { fg = a.ui, bg = a.bg },
+  -- MiniStatuslineInactive = {},
+  MiniStatuslineModeCommand = { fg = a.float, bg = b.green, bold = true },
+  MiniStatuslineModeInsert = { fg = a.float, bg = b.red, bold = true },
+  MiniStatuslineModeNormal = { fg = a.float, bg = a.com, bold = true },
+  MiniStatuslineModeOther = { fg = a.float, bg = b.red, bold = true },
+  MiniStatuslineModeReplace = { fg = a.float, bg = b.magenta, bold = true },
+  MiniStatuslineModeVisual = { fg = a.float, bg = b.yellow, bold = true },
+
+  -- MiniSurround = {},
+
+  -- MiniTablineCurrent = {},
+  -- MiniTablineVisible = {},
+  -- MiniTablineHidden = {},
+  -- MiniTablineModifiedCurrent = {},
+  -- MiniTablineModifiedVisible = {},
+  -- MiniTablineModifiedHidden = {},
+  -- MiniTablineTabpagesection = {},
+  MiniTablineFill = { link = 'TabLineFill' },
+
+  -- MiniTestEmphasis = {},
+  MiniTestFail = { fg = d.red, bold = true },
+  MiniTestPass = { fg = d.green, bold = true },
+
+  MiniTrailspace = { link = 'DiffRemoved' },
   ---- :h neotest (external plugin) -------------------
   NeoTestDir = 'Directory',
   NeoTestFile = { fg = b.blue },
