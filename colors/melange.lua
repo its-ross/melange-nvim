@@ -182,10 +182,24 @@ for name, attrs in pairs {
   -- ['@variable.parameter'] = {},
   -- ['@variable.parameter.builtin'] = {},
   -- ['@variable.member'] = {},
+  -- ['@keyword'] = {},
+  -- ['@keyword.conditional'] = {},
+  -- ['@keyword.conditional.ternary'] = {},
+  -- ['@keyword.coroutine'] = {},
+  -- ['@keyword.debug'] = {},
+  -- ['@keyword.directive'] = 'PreProc',
+  -- ['@keyword.directive.define'] = {},
+  -- ['@keyword.exception'] = {},
+  -- ['@keyword.function'] = 'Statement',
+  -- ['@keyword.import'] = 'PreProc',
+  -- ['@keyword.operator'] = {},
+  -- ['@keyword.repeat'] = {},
+  -- ['@keyword.return'] = {},
+  -- ['@keyword.storage'] = {},
 
   --- NOTE: Queries for these highlight groups are really hacky.
   --- Inaccurate syntax highlighting is worse than no highlighting at all,
-  ['@constant'] = 'Identifier',
+  ['@constant'] = 'Constant',
   ['@constant.builtin'] = 'Constant',
   ['@constant.macro'] = 'Constant',
 
@@ -211,6 +225,8 @@ for name, attrs in pairs {
 
   -- ['@type'] = {},
   ['@type.builtin'] = '@type',
+  -- ['@variable'] = 'Identifier',
+  -- ['@variable.builtin'] = { fg = c.magenta, italic = italic },
   -- ['@type.definition'] = {},
 
   -- ['@attribute'] = {},
@@ -640,6 +656,27 @@ for name, attrs in pairs {
   RainbowDelimiterGreen = { fg = b.green },
   RainbowDelimiterViolet = { fg = c.magenta },
   RainbowDelimiterCyan = { fg = b.cyan },
+  ---- :h neotest (external plugin) -------------------
+  NeoTestDir = 'Directory',
+  NeoTestFile = { fg = b.blue },
+  NeotestNamespace = 'Constant',
+  NeotestTest = 'Identifier',
+  ---- :h nvim-dap (external plugin) -------------------
+  DapUIScope = 'Type',
+  DapUIType = 'Constant',
+  DapUIDecoration = 'Type',
+  DapUIThread = { fg = b.green },
+  DapUIStoppedThread = 'Type',
+  DapUISource = 'Constant',
+  DapUILineNumber = 'Type',
+  DapUIFloatBorder = 'Type',
+  DapUIWatchesEmpty = { fg = c.red },
+  DapUIWatchesValue = { fg = b.green },
+  DapUIWatchesError = { fg = c.red },
+  DapUIBreakpointsPath = 'Type',
+  DapUIBreakpointsInfo = { fg = b.green },
+  DapUIBreakpointsCurrentLine = { fg = c.cyan, bold = bold },
+  DapUIModifiedValue = { fg = c.cyan, bold = bold },
 } do
   if type(attrs) == 'table' then
     vim.api.nvim_set_hl(0, name, attrs)
